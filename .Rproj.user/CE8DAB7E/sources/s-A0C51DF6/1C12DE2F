@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537560256593.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2934595042",
+    "id" : "1C12DE2F",
+    "lastKnownWriteTime" : 1539117194,
+    "last_content_update" : -2147483648,
+    "path" : "H:/Coastal Sediment/R_dashboard/App1.Rmd",
+    "project_path" : "App1.Rmd",
+    "properties" : {
+        "cursorPosition" : "201,23",
+        "scrollLine" : "180",
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
