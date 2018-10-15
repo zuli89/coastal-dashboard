@@ -1,0 +1,30 @@
+library(dataRetrieval)
+library(dplyr)
+library(leaflet)
+
+#get site number
+sites <- c("08067252", "08162501", "08188810")
+
+parm<-c("00061", "00010", "00095", "00300", "00400", "63680", "00600", "00605", "00607", "00608", "00618", "00613",
+        "00625", "00665", "00660", "00671", "00680", "00681", "62855", "62854", "70331", "80154")
+
+start.date<- "2014-10-01"
+end.date<- Sys.Date()
+
+data<- readNWISqw(siteNumbers= sites, 
+                 parameterCd= parm, 
+                 startDate = start.date,
+                 endDate = end.date, reshape = TRUE)
+
+data<- renameNWISColumns(data)
+
+info<- attr(data, "siteInfo")
+sitelist<-c(unique(info$station_nm))
+
+write.table(info, file="site_info.txt", row.names = FALSE)
+
+#mapTest
+
+m<- leaflet(data = info) %>% 
+  addProviderTiles(providers$Esri.WorldTopoMap) %>%
+  addMarkers(lat = ~dec_lat_va, lng =~dec_long_va, label = ~as.character(station_nm))

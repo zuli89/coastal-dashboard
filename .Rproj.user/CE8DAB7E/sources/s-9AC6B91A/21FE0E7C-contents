@@ -1,0 +1,29 @@
+library(dataRetrieval)
+
+
+site<- c("295826095082200","08071330", "295554095093401","294643095035200", "294607095042700", "08067074", "08067000")
+
+parm<-c("00003", "89011", "68288","68289", "01055")
+
+start.date<- "2013-08-01"
+end.date<- Sys.Date()
+
+coh<- readNWISqw(siteNumbers= site, 
+                 parameterCd= parm, 
+                 startDate = start.date,
+                 endDate = end.date, reshape = TRUE)
+coh<- renameNWISColumns(coh)
+
+siteInfo <- attr(coh, "siteInfo")
+coh$site<-siteInfo[match(coh$site_no, siteInfo$site_no), 3]
+
+data<-coh[c("sample_dt", "sample_tm","site_no","site","result_va_00003","result_va_01055","remark_cd_68288","result_va_68288",
+              "remark_cd_68289","result_va_68289","remark_cd_89011","result_va_89011")]
+
+#cohNew<-coh[c(3,2,91,4,22,36,49,50,63,64,77,78)]
+
+colnames(data)<- c("date", "time", "siteno", "site", "depth", "Mn", "GeosR", "Geos", "mibR", "mib", 
+                     "microR", "micro")
+
+
+#write.csv(cohNew, file = "data.csv", row.names = FALSE)

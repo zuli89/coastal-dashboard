@@ -1,4 +1,4 @@
-.chart-wrapper .chart-stage {
+#section-watershed-data-table.chart-wrapper .chart-stage {
 	overflow: scroll;
 }
 
@@ -36,5 +36,61 @@
   background-color: rgb(232, 237, 244)
 }
 
+a {
+  color: #137a26
+}
 
+a:hover {
+  color: #208c34
+}
 
+a:focus {
+  color: #208c34
+}
+
+th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+ 
+    div.container {
+        width: 80%;
+    }
+
+body {
+  min-width: 1180px;
+}
+
+/*Overview page*/
+
+#photo {
+  height: 80%; 
+}
+
+.chart-shim.flowing-content-shim.flowing-content-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1210px;
+}
+
+h2#project-title {
+  width: 100%;
+  margin-top: 0;
+}
+
+#section-frame-1 .chart-title {
+  display:none;
+}
+
+#desc-text {
+  width:50%;
+  font-size: 20px; 
+  margin-left: 2%;
+}
+
+#description {
+  width:100%;
+}
