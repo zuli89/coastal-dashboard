@@ -43,6 +43,7 @@ sitelist<-c(unique(data$basin)) #get a list of basin names
 Project Overview {data-orientation=rows}
 ==============================
 
+
 Row {data-height=800}
 -----------------------------
 
@@ -52,19 +53,47 @@ HTML(
   "<h2 id='project-title'> Evaluating Freshwater Inflow and Nutrient and Sediment Loading into Bays and Estuaries in Texas </h2>
   <img src='photo.png' alt='Trinity River' id='photo'>
   
-  <section id='desc-text'> <p id='description'> The U.S. Geological Survey (USGS), in cooperation with the Texas Water Development Board and the Galveston Bay Estuary Program, monitors nutrient and sediment concentrations and loads entering Texas bays and estuaries over a range of hydrologic conditions in four major River systems: Trinity River, Colorado River, Guadalupe-San Antonio River, and Nueces River. Streamflow is measured through index-velocity techniques and water-quality samples are collected during high flow and base flow conditions to improve our understanding of the quantity and quality of freshwater inflow to Texas bays and estuaries. Surrogate regressions are also developed to obtain a continuous record of sediment and nutrient concentrations in these watersheds. </p> </section>  "
+  <section id='desc-text'> <p id='description'> The U.S. Geological Survey (USGS), in cooperation with the Texas Water Development Board and the Galveston Bay Estuary Program, monitors nutrient and sediment concentrations and loads entering Texas bays and estuaries over a range of hydrologic conditions in fivr major River systems: Trinity River, Colorado River, San Jacinto River, Guadalupe-San Antonio River, and Nueces River. Streamflow is measured through index-velocity techniques and water-quality samples are collected during high flow and base flow conditions to improve our understanding of the quantity and quality of freshwater inflow to Texas bays and estuaries. Surrogate regressions are also developed to obtain a continuous record of sediment and nutrient concentrations in these watersheds. </p> </section>  "
 )
 
 ```
 
 
 
-Row {data-height=500}
+Row {data-height=600}
 ---------------------------
 
 ### Frame 2
+```{r}
+HTML(
+    "<h4 class='section-heading'> Partners </h4>
+    <section id = 'logos'>
+    <div id = 'long'>
+    <img src='twdb.png' alt = 'TWDB logo' id = 'twdb'> </div>
+    <div id='round'> <img src='gbep.png' alt = 'GBEP logo' id = 'gbep'>
+    <img src='cbbep.png' alt = 'CBBEP logo' id = 'cbep'> </div></section>" 
+  
+)
+
+```
+
 
 ### Frame 3
+
+```{r}
+
+HTML(
+  "<h4 class='section-heading'> Study Objectives </h4>
+  <ul class='objectives'> 
+    <li> Evaluate the variability of streamflow and nutrient and sediment concentrations and loads in the lower reaches of rivers entering Texas bays and estuaries.</li>
+    <li> Determine correlations between acoustic backscatter and nutrient and sediment concentrations to develop a real-time continuous record of these constituents for each watershed. </li>
+  <li>  Estimate nutrient and sediment loading to bays and estuaries in the Texas Gulf Coast using continuous data from streamflow-gaging stations and surrogate models. </li>
+
+  </ul>")
+
+```
+
+### Frame 4
 
 
 

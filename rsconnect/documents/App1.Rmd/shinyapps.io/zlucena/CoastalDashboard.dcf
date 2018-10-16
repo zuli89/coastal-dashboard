@@ -5,8 +5,8 @@ account: zlucena
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 503179
-bundleId: 1644424
+bundleId: 1646462
 url: https://zlucena.shinyapps.io/CoastalDashboard/
-when: 1539634299.4901
+when: 1539721781.72202
 asMultiple: FALSE
 asStatic: FALSE

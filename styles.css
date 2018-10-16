@@ -59,12 +59,14 @@ th, td { white-space: nowrap; }
 
 body {
   min-width: 1180px;
+  min-height: 600px;
 }
 
 /*Overview page*/
 
 #photo {
   height: 80%; 
+  padding-bottom: 10px;
 }
 
 .chart-shim.flowing-content-shim.flowing-content-container {
@@ -73,7 +75,9 @@ body {
   flex-wrap: wrap;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1210px;
+  max-width: 60%;
+  min-width: 1330px;
+  overflow: hidden;
 }
 
 h2#project-title {
@@ -81,7 +85,8 @@ h2#project-title {
   margin-top: 0;
 }
 
-#section-frame-1 .chart-title {
+#section-frame-1 .chart-title,
+#section-frame-2 .chart-title {
   display:none;
 }
 
@@ -93,4 +98,43 @@ h2#project-title {
 
 #description {
   width:100%;
+}
+
+.chart-wrapper.chart-stage {
+  min-height: 405px;
+}
+
+div#section-row.section.level2 {
+  min-height: 405px;
+}
+
+.objectives {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.section-heading {
+  padding: 10px 12px;
+  background-color: #003e7c;
+  text-align: center;
+  color: white;
+  margin:0;
+}
+
+#section-frame-3>.chart-stage.chart-stage-flex >.chart-shim {
+  top: 0;
+  left: 0;
+  right:0;
+}
+
+#section-frame-2>.chart-stage.chart-stage-flex >.chart-shim {
+  top: 0;
+  left: 0;
+  right:0;
+}
+
+#logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
